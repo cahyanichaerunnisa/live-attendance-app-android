@@ -35,6 +35,6 @@
 
     <include
         android:id="@+id/layout_bottom_sheet"
-        layout="@layout/bottom_sheet_attendance"/>
+        layout="@layout/bottom_sheet_attendance" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
