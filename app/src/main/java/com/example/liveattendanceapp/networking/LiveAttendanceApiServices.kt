@@ -1,6 +1,7 @@
 package com.example.liveattendanceapp.networking
 
 import com.example.liveattendanceapp.model.AttendanceResponse
+import com.example.liveattendanceapp.model.ChangePasswordResponse
 import com.example.liveattendanceapp.model.ForgotPasswordResponse
 import com.example.liveattendanceapp.model.HistoryResponse
 import com.example.liveattendanceapp.model.LoginResponse
@@ -46,4 +47,8 @@ interface LiveAttendanceApiServices {
     @Headers("Accept: application/json", "Content-Type: application/json")
     @POST("auth/logout")
     fun logoutRequest(@Header("Authorization") token: String): Call<LogoutResponse>
+
+    @Headers("Accept: application/json", "Content-Type: application/json")
+    @POST("auth/password/reset")
+    fun changePassword(@Header("Authorization") token: String, @Body body: String): Call<ChangePasswordResponse>
 }
