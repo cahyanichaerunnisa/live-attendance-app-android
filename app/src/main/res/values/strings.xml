@@ -38,4 +38,6 @@
     <string name="something_wrong">Something Wrong</string>
     <string name="your_already_present">You Already Present</string>
     <string name="n" translatable="false">\\n</string>
+    <string name="your_password_didnt_match">Your Password Didn\'t Match</string>
+    <string name="your_password_has_been_update">Your Password Has Been Update</string>
 </resources>
