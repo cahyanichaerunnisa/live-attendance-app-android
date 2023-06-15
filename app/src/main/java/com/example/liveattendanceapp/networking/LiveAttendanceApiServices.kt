@@ -4,6 +4,7 @@ import com.example.liveattendanceapp.model.AttendanceResponse
 import com.example.liveattendanceapp.model.ForgotPasswordResponse
 import com.example.liveattendanceapp.model.HistoryResponse
 import com.example.liveattendanceapp.model.LoginResponse
+import com.example.liveattendanceapp.model.LogoutResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import retrofit2.Call
@@ -41,4 +42,8 @@ interface LiveAttendanceApiServices {
                              @Query("from") fromDate: String,
                              @Query("to") toDate: String
     ): Call<HistoryResponse>
+
+    @Headers("Accept: application/json", "Content-Type: application/json")
+    @POST("auth/logout")
+    fun logoutRequest(@Header("Authorization") token: String): Call<LogoutResponse>
 }
